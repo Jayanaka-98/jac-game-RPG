@@ -25,7 +25,7 @@ obj Player:pygame.sprite.Sprite:{
         self.game = game;
         self._layer = PLAYER_LAYER;
         self.groups = self.game.all_sprites;
-        pygame.sprite.Sprite.__init__(self.groups);
+        pygame.sprite.Sprite.<init>(self,self.groups);
 
         self.x = x * TILESIZE;
         self.y = y * TILESIZE;
@@ -325,7 +325,7 @@ obj Block:pygame.sprite.Sprite:{
         self.game = game;
         self._layer = BLOCK_LAYER;
         self.groups = (self.game.all_sprites, self.game.blocks);
-        pygame.sprite.Sprite.<init>(self.groups);
+        pygame.sprite.Sprite.<init>(self,self.groups);
 
         self.x = x * TILESIZE;
         self.y = y * TILESIZE;
@@ -347,7 +347,7 @@ obj Ground:pygame.sprite.Sprite:{
         self.game = game;
         self._layer = GROUND_LAYER;
         self.groups = self.game.all_sprites;
-        pygame.sprite.Sprite.<init>(self.groups);
+        pygame.sprite.Sprite.<init>(self, self.groups);
 
         self.x = x * TILESIZE;
         self.y = y * TILESIZE;

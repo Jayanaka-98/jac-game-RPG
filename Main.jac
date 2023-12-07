@@ -58,7 +58,7 @@ obj Game {
 
     can events(){
         for events in pygame.event.get(){
-            if event.type == pygame.QUIT{
+            if events.type == pygame.QUIT{
                 self.playing = False;
                 self.running = False;
             }
