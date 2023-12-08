@@ -408,7 +408,7 @@ obj Attack:pygame.sprite.Sprite:{
         self.game = game;
         self._layer = ATTACK_LAYER;
         self.groups = (self.game.all_sprites, self.game.attacks);
-        pygame.sprite.Sprite.__init__(self, self.groups);
+        pygame.sprite.Sprite.<init>(self, self.groups);
 
         self.x = x;
         self.y = y;
@@ -423,8 +423,6 @@ obj Attack:pygame.sprite.Sprite:{
         self.rect.x = self.x;
         self.rect.y = self.y;
     }
-        
-        
     
     can update(){
         self.animate();
